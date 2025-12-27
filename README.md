@@ -19,6 +19,9 @@ C dili ile geliştirilmiş, "break/continue" gibi akışı bozan komutlar kullan
 [📂 Proje Kodlarına Git](./1-Session-Project-TR-ENG)
 
 ---
+<img width="732" height="616" alt="image" src="https://github.com/user-attachments/assets/46477dd1-66ac-4b74-b3a2-36fbafc91ce0" />
+<img width="567" height="710" alt="image" src="https://github.com/user-attachments/assets/e45be0d0-b537-4caf-961f-8a191bb223e2" />
+<img width="671" height="586" alt="image" src="https://github.com/user-attachments/assets/2c011e5c-95f6-4b89-ac7e-622473b257c4" />
 
 ## 🚀 Nasıl Çalıştırılır? (How to Run)
 
