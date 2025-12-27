@@ -23,7 +23,7 @@ C dili ile geliştirilmiş, "break/continue" gibi akışı bozan komutlar kullan
 ## 🚀 Nasıl Çalıştırılır? (How to Run)
 
 Projeleri çalıştırmak için ilgili klasöre gidip GCC derleyicisi kullanabilirsiniz.
-Örneğin Candy Crush için:
+Örneğin Panel de Pon için:
 
 ```bash
 cd 1-Session-Project-TR-ENG
