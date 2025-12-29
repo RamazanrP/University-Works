@@ -58,21 +58,35 @@ void move_changing_placement(int row1, int column1, int row2, int column2){
     }
     printf("\n Our Placements moved one row up and bottom line has been updated")
 }
+void swap_cells(int r1,int c1,int r2, int c2) {
+    char temp = table[r1][c1];
+    table[r1][c1] = table[r2][c2];
+    table[r2][c2] = temp;
+}
 void gravity() {
-    // We'll firstly place lower lines bc upper stones comes up from above
-    int i,j;
-    for( j=0; j<M; j++){
-        int written_index = N-1;
-        for( i=N-1; i>=0; i--){
-            if(table[i][j] != ' '){ // If stones are not bombed move down
-                table[written_index][j] = table[i][j];
-                if(written_index != i){
-                    table[i][j]= ' ';
+    int is_move;
+    do {
+        is_move = 0;
+        int i,j;
+        for(j=0; j<M; j++){
+            for(i = N-1; i>0; i--){
+                if(table[i][j] == ' ' && table[i-1][j] != ' '){
+                    swap_cells(i,j,i-1,j);
+                    is_move = 1;
                 }
-                written_index--;
             }
         }
-    }
+        //Animation Part :)
+        if(is_move) {
+            system("cls");
+            print_table();
+            printf("\nGravity is being applied... \n ");
+            Sleep(150); // For the scroll to be visible
+        }
+    } while(is_move == 1);
+    system("cls");
+    print_table();
+    printf("Placements have fallen into place"); //To print the final status screen.
 }
 //Progress of Bombing
 void move_bombing(int row, int column){
@@ -175,3 +189,4 @@ int main() {
     }
     return 0;
 }
+
