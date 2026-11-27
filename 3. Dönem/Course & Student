@@ -1,0 +1,42 @@
+import java.util.*; // dedik ve HashMap kullanmaya hazırız
+
+public Class Course{
+    private HashMap<Integer, Student> students; // () yok bak
+
+    public Course(....){
+        students = new HashMap<Integer, Student>(); // Şimdi () var
+    }
+
+    public boolean addStudent(Student aStudent){
+        if(getStudentCount() == capacity || findStudent(aStudent.getNumber()) != null){
+            return false;
+        }
+        students.put(aStudent.getNumber(), aStudent);
+        return true;
+    }
+
+    public Studen findStudent(int number){
+        return students.get(number);
+        // students içerisinde key'i number olan elemanın  value'su olan öğrenciyi
+        // yok ise null döndürür
+    }
+
+    public void increaseCapacity(int newCapacity){
+        if(newCapacity <= capacity) return;
+        capacity = newCapacity;
+    }
+}
+
+public class PreTypeCasting{
+    LinkedList list = new LinkedList(); // <> yapmadan söylersen OBJECT türünde oluşur
+
+    for(Object obj : list){
+        if(obj instanceof Course){
+            Course c = (Course)obj; // Downcasting yaptık ki özelliklerini kullanabilelim
+            c.addStudent(new Student(123, "Ahmet Elbir"));
+        }else if(obj instanceof Student){
+            Student std = (Student)obj;
+            oop.addStudent(std);
+        }
+    }
+}
